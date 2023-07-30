@@ -14,21 +14,21 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route("/courses", methods=['GET','POST'])
-def courses():
-    return render_template('courses.html')
+@app.route("/scholarships", methods=['GET','POST'])
+def scholarships():
+    return render_template('scholarships.html')
 
-@app.route('/trainers', methods=['GET', 'POST'])
-def trainers():
-    return render_template('trainers.html')
+@app.route('/alumani', methods=['GET', 'POST'])
+def alumani():
+    return render_template('alumani.html')
 
 @app.route("/events", methods=['GET','POST'])
 def events():
     return render_template('events.html')
 
-@app.route("/pricing", methods=['GET','POST'])
-def pricing():
-    return render_template('pricing.html')
+@app.route("/studentlife", methods=['GET','POST'])
+def studentlife():
+    return render_template('studentlife.html')
 #Code goes above here
 
 if __name__ == '__main__':
