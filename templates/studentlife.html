@@ -82,6 +82,11 @@
     </div>
   </header><!-- End Header -->
   <br><br><br><br><br><br><br><br><br><br><br>
+  {%for i in comments%}
+  {{comments[i]['username']}}<br>
+  {{comments[i]['comment']}}
+  {%endfor%}
+
   <a href="/comments"><button>Check The Comments</button></a>
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -111,7 +116,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
-
+          
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>

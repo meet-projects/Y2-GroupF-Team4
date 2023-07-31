@@ -53,6 +53,10 @@
       </nav><!-- .navbar -->
     </div>
   </header><!-- End Header -->
+  {%for i in comments%}
+  {{comments[i]['username']}}<br>
+  {{comments[i]['comment']}}
+  {%endfor%}
 
   <br><br><br><br><br><br><br>
   <form action="/comments" method="post">
@@ -61,5 +65,6 @@
     <textarea name="comment" placeholder="comment" required></textarea>
     <input type="submit">
   </form>
+
 </body>
 </html>
