@@ -1560,3 +1560,12 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+.form{
+  margin-left: 37%;
+  border: 5px solid #5fcf80;
+  background-color: #5fcf80;
+  border-radius: 50px;
+  width: 500px;
+  padding-top: 10px;
+}
