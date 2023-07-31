@@ -56,6 +56,7 @@ def events():
 
 @app.route("/studentlife", methods=['GET','POST'])
 def studentlife():
+    
     return render_template('studentlife.html')
 
 @app.route('/comments', methods=['GET','POST'])
@@ -67,10 +68,14 @@ def comments():
             text = request.form['comment']
             comment = {"username": name,"email": email, "comment": text}
             db.child("Comments").push(comment)
-            return redirect(url_for('comments'))
+            x = db.child("Comments").get().val()
+            return render_template('comments.html',comments=x)
         except:
             error = "error"
     return render_template('comments.html')
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    return render_template('contact.html')
 #Code goes above here
 
 if __name__ == '__main__':
