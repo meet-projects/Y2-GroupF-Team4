@@ -58,18 +58,33 @@
   <form action="/comments" method="post" align="center">
     <br>
     <br>
-    <input type="text" name="username" placeholder="username" required>
+    <input class="username" type="text" name="username" placeholder="name" required>
     <br>
     <br>
-    <input type="email" name="email" placeholder="email" required>
+    <input class="email" type="email" name="email" placeholder="email" required>
     <br>
     <br>
-    <textarea name="comment" placeholder="comment" required></textarea>
+    <textarea class="textarea" name="comment" placeholder="comment" required></textarea>
     <br>
     <br>
     <input type="submit">
     <br>
     <br>
+
+    <hr>
+    <h2>Comments:</h2>
+
+    <div class="comments">
+        {%for i in comments%}
+        <div class="comment-place">
+            <h6>Name: {{comments[i]['username']}}</h6>
+            
+            <br>
+            
+            <h5>Comment: {{comments[i]['comment']}}</h5>
+        </div>
+        {%endfor%}
+    </div>
 </form>
 </body>
 </html>

@@ -68,11 +68,12 @@ def comments():
             text = request.form['comment']
             comment = {"username": name,"email": email, "comment": text}
             db.child("Comments").push(comment)
-            x = db.child("Comments").get().val()
-            return render_template('comments.html',comments=x)
+            comments = db.child("Comments").get().val()
+            return render_template('comments.html', comments = comments)
         except:
             error = "error"
-    return render_template('comments.html')
+    comments = db.child("Comments").get().val()
+    return render_template('comments.html', comments=comments)
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     return render_template('contact.html')

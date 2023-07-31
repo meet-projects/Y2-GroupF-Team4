@@ -1561,11 +1561,85 @@ section {
   text-decoration: none;
 }
 
-.form{
-  margin-left: 37%;
-  border: 5px solid #5fcf80;
-  background-color: #5fcf80;
-  border-radius: 50px;
-  width: 500px;
-  padding-top: 10px;
+.form {
+  width: 350px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.username,
+.email,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.username::placeholder,
+.email::placeholder,
+.textarea::placeholder {
+  color: #999;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.form {
+  text-align: center;
+}
+
+/* Styles for the comment section container */
+.comments {
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for each comment */
+.comment-place {
+  margin-bottom: 20px;
+  background-color: #ffffff; /* Light background color for each comment */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.comment-place p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Username styles */
+.comment-place .username {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff; /* Or any other color of your choice */
+  margin-bottom: 5px;
+}
+
+/* Center the comments */
+.comments {
+  text-align: left;
 }
