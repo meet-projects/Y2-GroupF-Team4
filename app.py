@@ -40,10 +40,10 @@ def scholarships():
             email = request.form['email']
             text = request.form['schoolarTalk']
             application = {"name": name,"email": email, "text": text}
-            db.child("Applications").set(application)
+            db.child("Applications").push(application)
             return redirect(url_for('scholarships'))
         except:
-            return "error lolies"
+            error = "error"
     return render_template('scholarships.html')
 
 @app.route('/alumani', methods=['GET', 'POST'])
@@ -60,6 +60,16 @@ def studentlife():
 
 @app.route('/comments', methods=['GET','POST'])
 def comments():
+    if request.method == 'POST':
+        try:
+            name = request.form['username']
+            email = request.form['email']
+            text = request.form['comment']
+            comment = {"username": name,"email": email, "comment": text}
+            db.child("Comments").push(comment)
+            return redirect(url_for('comments'))
+        except:
+            error = "error"
     return render_template('comments.html')
 #Code goes above here
 
