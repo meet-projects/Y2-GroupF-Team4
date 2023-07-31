@@ -73,7 +73,9 @@ def comments():
         except:
             error = "error"
     return render_template('comments.html')
-
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    return render_template('contact.html')
 #Code goes above here
 
 if __name__ == '__main__':
