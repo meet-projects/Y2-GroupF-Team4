@@ -1643,3 +1643,29 @@ input[type="submit"]:hover {
 .comments {
   text-align: left;
 }
+
+.gallery {
+  background-color: #f0e9e9;
+  display: grid;
+  width: 500px;
+  height: auto;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add hover effect */
+.gallery img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
